@@ -1,8 +1,37 @@
+# Flask 서버를 사용하기 위해 가져옴
 from flask import Flask, render_template
-from blueprints.member_service_JJH import member_bp
-from blueprints.bank_IGE import bank_bp
-from blueprints.memo_KTK import memo_bp
-from blueprints.oneline_diary_KDM import oneline_diary_bp
-from blueprints.todo_list_SK import todo_bp
 
 
+# 내가 만든 회원관리 Blueprint 가져오기
+from blueprints.member_service_JJH.routes import member_bp
+
+
+# Flask 애플리케이션 생성
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('index.html')
+
+# 세션(session) 기능을 사용하기 위한 비밀키
+# 로그인 정보 저장할 때 필요
+app.secret_key = 'team_project_secret'
+
+
+# -----------------------------
+# Blueprint 등록
+# -----------------------------
+# routes.py 에서 만든 회원관리 기능을
+# Flask 서버에 등록하는 작업
+
+app.register_blueprint(member_bp)
+
+
+# -----------------------------
+# 서버 실행
+# -----------------------------
+# 현재 파일을 직접 실행했을 때만
+# Flask 서버가 켜짐
+
+if __name__ == '__main__':
+    app.run(debug=True)

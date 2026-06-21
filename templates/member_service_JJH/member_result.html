@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>결과</title>
+</head>
+<body>
+    
+    {% if msg %}
+
+    <h3>{{ msg }}</h3>
+
+    {% else %}
+
+        <h2>회원 정보</h2>
+
+        <p>아이디: {{ user_id }}</p>
+        <p>이메일: {{ user_mail }}</p>
+        <p>전화번호: {{ user_phone }}</p>
+
+    {% endif %}
+
+    <a href="/member/form">
+        다시 조회
+    </a>
+
+</body>
+</html>
