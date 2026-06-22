@@ -31,7 +31,7 @@ app.register_blueprint(member_bp)
 
 
 @app.route('/bank_home')
-def home():
+def bank_home():
     return render_template('bank/bank_home.html')
 
 # -----------------------------
