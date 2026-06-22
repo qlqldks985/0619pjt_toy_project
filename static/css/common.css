@@ -1,0 +1,87 @@
+/* 1. 기본 여백 초기화 및 기본 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 2. 레이아웃 공통 틀 구조 */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.global-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 3. 내비게이션 메뉴 기본 정렬 틀 */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.auth-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: #495057;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #212529;
+}
+input {
+    padding: 10px;
+    border: 1px solid #dadada;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.input_basic {
+    width: 300px;
+    outline: none;
+}
+
+.input_button_basic_130 {
+    width: 130px;
+}
