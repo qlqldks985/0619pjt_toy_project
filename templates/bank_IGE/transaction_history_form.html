@@ -1,0 +1,28 @@
+<!-- 계좌 목록 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BANK</title>
+
+    <script src="{{ url_for('static', filename='bank/bank.js')}}"></script>
+</head>
+<body>
+    <article id="account_opening_wrap">
+        <div class="transaction_history_form">
+
+            <p class="uName"> {{ uName }} 님의 계좌 상태 </p>
+            {% for uuid in bankData %}
+            <input type="checkbox" value="{{ uuid.계좌번호 }}">
+            <br>
+            {{ uuid.계좌번호 }}
+            <br>
+            {% endfor %}
+            <input class="input_button_basic_130" type="button" value="계좌 입금" onclick="transferMoney();">
+            <input class="input_button_basic_130" type="button" value="계좌 출금" onclick="withdrawMoney();">
+            <input class="input_button_basic_130" type="button" value="계좌 상태 수정" onclick="changeStatus();">
+            <input class="input_button_basic_130" type="button" value="계좌 해지" onclick="closeAccount()">
+        </div>
+    </article>
+</body>
+</html>

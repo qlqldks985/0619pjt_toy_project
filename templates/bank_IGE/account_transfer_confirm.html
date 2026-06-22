@@ -1,0 +1,19 @@
+<!-- 계좌 송금 완료 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BANK</title>
+
+    <script src="{{ url_for('static', filename='bank/bank.js')}}"></script>
+</head>
+<body>
+    <article id="account_opening_wrap">
+        <div class="account_transfer">
+                <p>송금이 완료 되었습니다.</p>
+                <input class="input_button_basic_130" type="button" value="메인으로" onclick="goHome();">
+                <input class="input_button_basic_130" type="button" value="목록으로" onclick="accountList();">
+        </div>
+    </article>
+</body>
+</html>

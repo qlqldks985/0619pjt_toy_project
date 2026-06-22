@@ -1,0 +1,26 @@
+<!-- 계좌 송금 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BANK</title>
+
+    <script src="{{ url_for('static', filename='bank/bank.js')}}"></script>
+</head>
+<body>
+    <article id="account_opening_wrap">
+        <div class="account_transfer">
+            <form action="/bank/account_opening_confirm" method="post" name="account_transfer">
+                <input class="input_basic" type="text" name="transferMemo" placeholder="입금내역 메모">
+                <br>
+                <input class="input_basic" type="text" name="accountMoney" placeholder="입금 할 금액">
+                <br>
+                <input class="input_basic" type="password" name="accountPw" placeholder="계좌 비밀번호">
+                <br>
+                <input class="input_button_basic_130" type="button" value="계좌 목록" onclick="accountList();">
+                <input class="input_button_basic_130" type="reset" value="초기화">
+            </form>
+        </div>
+    </article>
+</body>
+</html>
