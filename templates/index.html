@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>메인 페이지</title>
-    <link rel="stylesheet" href="../static/css/common.css">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
     
@@ -14,8 +14,8 @@
                 <h1 class="logo">돈이 돼지</h1>
                 <nav class="nav-menu">
                     <div class="auth-group guest-menu">
-                        <a href="./member_service_JJH/signin_form.html" class="nav-link btn-login">로그인</a>
-                        <a href="./member_service_JJH/signup_form.html" class="nav-link btn-signup">회원가입</a>
+                        <a href="{{ url_for('member_service_jjh.signin_form') }}" class="nav-link btn-login">로그인</a>
+                        <a href="{{ url_for('member_service_jjh.signup_form') }}" class="nav-link btn-signup">회원가입</a>
                     </div>
                 </nav>
             </div> 
@@ -23,8 +23,8 @@
 
         <main class="main-content">
             <div class="content-container">
-                <a href="./member_service_JJH/signin_form.html" class="banner-link">
-                    <img src="../static/img/bank.jpg" class="banner-img" alt="돈이 돼지 은행 화면입니다.">
+                <a href="{{ url_for('member_service_jjh.signin_form') }}" class="banner-link">
+                    <img src="{{ url_for('static', filename='img/bank.jpg') }}" class="banner-img" alt="돈이 돼지 은행 화면입니다.">
                 </a>
             </div>
         </main>  

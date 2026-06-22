@@ -1,39 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>회원 가입</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/member_JJH/member.css') }}">
 </head>
 <body>
-    
-    <h1>회원 가입</h1>
 
-<form action="/signup/confirm" method="post">
+    <div class="header-links">
+        <a href="{{ url_for('member_service_jjh.signin_form') }}">로그인으로</a>
+        <a href="/">홈으로</a>
+    </div>
 
-        <input type="text" name="user_id" placeholder="Input your new id">
+    <form action="/signup/confirm" method="post">
+        <h1>회원 가입</h1>
 
-        <br>
+        <input type="text" name="user_id" placeholder="아이디를 입력하세요">
+        <input type="password" name="user_pw" placeholder="비밀번호를 입력하세요">
+        <input type="email" name="user_mail" placeholder="메일을 입력하세요.">
+        <input type="text" name="user_phone" placeholder="사용자의 번호를 입력하세요">
 
-        <input type="password" name="user_pw" placeholder="Input your new pw">
-
-        <br>
-
-        <input type="email" name="user_mail" placeholder="Input your new mail">
-
-        <br>
-
-        <input type="text" name="user_phone" placeholder="Input your new phone">
-
-        <br><br>
-
-        <button type="submit">
-            회원가입
-        </button>
-        <button type="reset">
-            초기화
-        </button>
-
-</form>
+        <div class="auth-btn-group">
+            <button type="submit">회원가입</button>
+            <button type="reset">초기화</button>
+        </div>
+    </form>
 
 </body>
 </html>

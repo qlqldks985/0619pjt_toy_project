@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>로그인</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/member_JJH/member.css') }}">
 </head>
 <body>
-    
-    <h1>로그인</h1>
 
-<form action="/signin/confirm" method="post">
+    <div class="header-links">
+        <a href="{{ url_for('member_service_jjh.signup_form') }}">회원가입</a>
+        <a href="/">홈으로</a>
+    </div>
 
-        <input type="text" name="user_id" placeholder="Input your id">
+    <form action="/signin/confirm" method="post">
+        <h1>로그인</h1>
 
-        <br>
+        <input type="text" name="user_id" placeholder="아이디를 입력하세요">
+        <input type="password" name="user_pw" placeholder="비밀번호를 입력하세요">
 
-        <input type="password" name="user_pw" placeholder="Input your pw">
-
-        <br><br>
-
-        <button type="submit">
-            로그인
-        </button>
-
-</form>
+        <button type="submit">로그인</button>
+    </form>
 
 </body>
 </html>
