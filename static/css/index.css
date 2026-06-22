@@ -1,0 +1,129 @@
+/* 1. 로고 스타일 */
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212529;
+    letter-spacing: -0.5px;
+}
+
+/* 2. 로그인/회원가입/로그아웃 버튼 스타일 */
+.btn-login {
+    padding: 6px 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.btn-login:hover {
+    background-color: #f1f3f5;
+    cursor: pointer;
+}
+
+.btn-signup {
+    padding: 6px 16px;
+    border-radius: 4px;
+    background-color: #212529;
+    color: #ffffff !important;
+}
+
+.btn-signup:hover {
+    background-color: #343a40;
+    cursor: pointer;
+}   
+
+.btn-logout {
+    color: #fa5252 !important;
+}
+
+/* 3. 메인 콘텐츠 및 이미지 영역 */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+
+
+
+/* 이미지 관리(img) */
+.banner-img { 
+    width: 350px;      
+    height: auto;     
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+/* 1. 로고 스타일 */
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: #212529;
+    letter-spacing: -0.5px;
+}
+
+/* 2. 로그인/회원가입/로그아웃 버튼 스타일 */
+.btn-login {
+    padding: 6px 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.btn-login:hover {
+    background-color: #f1f3f5;
+}
+
+.btn-signup {
+    padding: 6px 16px;
+    border-radius: 4px;
+    background-color: #212529;
+    color: #ffffff !important;
+}
+
+.btn-signup:hover {
+    background-color: #343a40;
+}
+
+.btn-logout {
+    color: #fa5252 !important;
+}
+
+/* 3. 메인 콘텐츠 및 이미지 영역 */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+
+
+
+/* 이미지 관리(img) */
+.banner-img {
+    
+    width: 350px ;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    
+    /* 둥둥 떠 있는 애니메이션과 부드러운 전환 효과를 동시에 적용 */
+    animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.banner-img:hover {
+    /* 마우스를 올리면 기본 둥둥 뜨는 애니메이션을 잠시 멈추고 살짝 키움 */
+    animation-play-state: paused;
+    transform: scale(1.05);
+}
+
+
+
+
+
+

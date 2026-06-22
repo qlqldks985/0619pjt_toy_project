@@ -1,33 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>메인 페이지</title>
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/index.css">
 </head>
 <body>
     
-    <h1>회원 관리 시스템</h1>
+    <div class="wrapper">
+        <header class="global-header">
+            <div class="header-container">
+                <h1 class="logo">돈이 돼지</h1>
+                <nav class="nav-menu">
+                    <div class="auth-group guest-menu">
+                        <a href="login.html" class="nav-link btn-login">로그인</a>
+                        <a href="#" class="nav-link btn-signup">회원가입</a>
+                    </div>
+                </nav>
+            </div> 
+        </header> 
 
-    {% if session.get('login_member') == None %}
-
-        <a href="/signup/form">회원 가입</a>
-        <br><br>
-
-        <a href="/signin/form">로그인</a>
-
-    {% else %}
-
-        <p>{{ session['login_member'] }}님 환영합니다.</p>
-
-        <a href="/logout">로그아웃</a>
-        <br><br>
-
-        <a href="/modify/form">회원 정보 수정</a>
-        <br><br>
-
-        <a href="/delete/form">회원 탈퇴</a>
+        <main class="main-content">
+            <div class="content-container">
+                <a href="login.html" class="banner-link">
+                    <img src="../static/img/bank.jpg" class="banner-img" alt="돈이 돼지 은행 화면입니다.">
+                </a>
+            </div>
+        </main>  
         
-    {% endif %}
+        <footer class="global-footer">
+            <div class="footer-container">
+                <p class="footer-title">돈이 돼지 프로젝트 팀원</p>
+                <div class="team-members">
+                    <span>임경선</span>
+                    <span>이고은</span>
+                    <span>전종호</span>
+                    <span>김태경</span>
+                    <span>우수경</span>
+                    <span>김대명</span>
+                </div>
+                <p class="copyright">&copy; 2026 Team 돈이돼지. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
 
 </body>
 </html>
